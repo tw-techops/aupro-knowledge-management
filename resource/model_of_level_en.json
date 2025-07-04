@@ -1,0 +1,186 @@
+{
+    "levels": {
+        "L0": {
+            "title": "L0 - Fully Manual Driven",
+            "description": "Establish infrastructure and process standards",
+            "features": "No AI intelligence capabilities, relying on traditional manpower and tools",
+            "capabilities": {
+            }
+        },
+        "L1": {
+            "title": "L1 - Intelligent Programming Assistant",
+            "description": "AI assists individual developers",
+            "features": "AI provides code completion, comment generation and other local assistance",
+            "capabilities": {
+                "Personnel": [
+                    "Basic Prompt writing capability",
+                    "AI tool operation capability"
+                ],
+                "Process": [
+                    "Personal development workflow AI integration",
+                    "Code-comment-debug assistance process"
+                ],
+                "Technical": [
+                    "Intelligent code completion tool usage",
+                    "Automatic comment/documentation generation",
+                    "Basic test case generation"
+                ],
+                "Knowledge": [
+                    "Intelligent error message interpretation"
+                ],
+                "Governance": [
+                    "Personal AI usage standards establishment"
+                ]
+            }
+        },
+        "L2": {
+            "title": "L2 - Team-level AI Engineering",
+            "description": "Team collaborative AI integration",
+            "features": "Team summarizes Prompt patterns, introduces basic Agent collaboration, unified methodology builds standardized Prompts, AI output quality baseline control",
+            "capabilities": {
+                "Personnel": [
+                    "Team Prompt collaboration capability",
+                    "Team Prompt template management capability",
+                    "Team Prompt template usage specification design capability",
+                    "Agent usage and maintenance capability"
+                ],
+                "Process": [
+                    "AI workflow construction capability",
+                    "Requirements→Code→Testing end-to-end pipeline design capability",
+                    "AI output manual review process",
+                    "Process integration basic Agent"
+                ],
+                "Technical": [
+                    "MCP integration capability",
+                    "Basic Agent construction capability",
+                    "Code review Agent construction",
+                    "User story generation Agent construction"
+                ],
+                "Knowledge": [
+                    "Prompt template management capability",
+                    "Rule Template maintenance",
+                    "Solution Template maintenance"
+                ],
+                "Governance": [
+                    "Shared Prompt library governance",
+                    "Team collaboration mechanism establishment",
+                    "MCP version management"
+                ]
+            }
+        },
+        "L3": {
+            "title": "L3 - AI Autonomous Development",
+            "description": "AI-led development process",
+            "features": "AI executes closed-loop tasks within preset rules, human supervision at key nodes",
+            "capabilities": {
+                "Personnel": [
+                    "AI system supervision and intervention capability",
+                    "Complex system architecture understanding capability",
+                    "Cross-role AI tool usage specification design capability"
+                ],
+                "Process": [
+                    "AI-led development process design",
+                    "Multi-Agent coordination workflow",
+                    "High-risk operation manual approval mechanism"
+                ],
+                "Technical": [
+                    "Template intelligent integration capability",
+                    "Multi-Agent coordination capability",
+                    "Automated code review Agent",
+                    "Automated story card generation Agent",
+                    "Agent's basic decision-making capability",
+                    "Agent's decision-making capability in non-core functions",
+                    "Agent's execution plan formulation capability in non-core functions",
+                    "Architecture guardian automation (automatically intercept PRs that violate architecture)",
+                    "Technical decision impact assessment (automatically mark high-risk modifications)"
+                ],
+                "Knowledge": [
+                    "Structured prompt intelligent integration and optimization capability",
+                    "Rule abstraction capability",
+                    "Structured analysis capability of implementation details",
+                    "Workflow governance capability"
+                ],
+                "Governance": [
+                    "AI governance framework",
+                    "AI credit scoring system (dynamically adjust permissions based on historical output quality)",
+                    "AI output quality verification process",
+                    "Agent collaboration specification management",
+                    "Manual intervention knowledge precipitation mechanism"
+                ]
+            }
+        },
+        "L4": {
+            "title": "L4 - High Autonomy & Innovation",
+            "description": "AI proactive optimization and innovation",
+            "features": "AI proposes new solutions beyond existing rules, driving business innovation",
+            "capabilities": {
+                "Personnel": [
+                    "Business goal understanding and transformation capability",
+                    "AI innovation solution evaluation capability"
+                ],
+                "Process": [
+                    "Workflow automatic optimization and improvement",
+                    "Cross-functional Agent innovation collaboration process",
+                    "Sandbox environment verification and rollback process",
+                    "Technical debt autonomous identification and refactoring proposal process"
+                ],
+                "Technical": [
+                    "Agent's intent understanding and matching capability",
+                    "Agent's autonomous decision-making capability",
+                    "Multi-Agent collaboration capability",
+                    "Model fine-tuning capability",
+                    "Agent's self-optimization capability",
+                    "Structured Prompt self-evolution capability"
+                ],
+                "Knowledge": [
+                    "Business goals→Technical solutions autonomous mapping",
+                    "Fuzzy requirement reasoning completion",
+                    "Data-driven opportunity discovery (user feedback/log analysis)",
+                    "Prompt chain self-evolution accumulation",
+                    "Rule template self-evolution accumulation",
+                    "Solution template self-evolution accumulation"
+                ],
+                "Governance": [
+                    "Innovation and risk control capability balance",
+                    "Solution consistency alignment mechanism",
+                    "Technical selection autonomous decision-making specifications"
+                ]
+            }
+        },
+        "L5": {
+            "title": "L5 - Fully Autonomous AI Delivery",
+            "description": "AI fully autonomous software delivery - Agentic AI",
+            "features": "Agentic AI with organizational DNA, AI end-to-end control of the entire delivery process",
+            "capabilities": {
+                "Personnel": [
+                    "Strategy→Technical implementation autonomous translation capability",
+                    "Business goals→Technical implementation autonomous translation capability",
+                    "Natural language programming capability"
+                ],
+                "Process": [
+                    "Full delivery process AI automation",
+                    "Business requirement analysis→Business story→Technical solution→Autonomous architecture design→Structured Prompt generation→Code generation→Testing→Deployment closed loop",
+                    "Emergency takeover mechanism"
+                ],
+                "Technical": [
+                    "Intent understanding and matching capability",
+                    "High-level business instruction→Complete task chain decomposition capability",
+                    "Real-time architecture guardian",
+                    "Business continuity self-maintenance",
+                    "Agentic AI self-evolution system (TBD)"
+                ],
+                "Knowledge": [
+                    "Production data feedback self-training",
+                    "Knowledge base real-time update",
+                    "Cost/risk adaptive trade-off"
+                ],
+                "Governance": [
+                    "Native organizational and governance capabilities",
+                    "AI ethics review framework",
+                    "Digital ethics autonomous review framework",
+                    "CAIO (Chief AI Officer) functional support"
+                ]
+            }
+        }
+    }
+} 
