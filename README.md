@@ -1,5 +1,8 @@
 # AI Maturity Model Visualization System
 
+> **Chinese Version**: [README_ZH.md](README_ZH.md)  
+> **English Version**: You are reading it now
+
 ## 📋 Project Overview
 
 This is a Plotly-based AI software delivery capability maturity model visualization system that displays 6 maturity levels (L0-L5) and 5 core capability dimensions through interactive fishbone diagrams. The system supports capability tracking, progress saving, and multi-language display, helping individuals and teams assess their current AI capabilities and develop improvement plans.
