@@ -25,7 +25,7 @@
                     "Automatic comment/documentation generation",
                     "Basic test case generation"
                 ],
-                "Knowledge": [
+                "Knowledge Management": [
                     "Intelligent error message interpretation"
                 ],
                 "Governance": [
@@ -56,7 +56,7 @@
                     "Code review Agent construction",
                     "User story generation Agent construction"
                 ],
-                "Knowledge": [
+                "Knowledge Management": [
                     "Prompt template management capability",
                     "Rule Template maintenance",
                     "Solution Template maintenance"
@@ -94,7 +94,7 @@
                     "Architecture guardian automation (automatically intercept PRs that violate architecture)",
                     "Technical decision impact assessment (automatically mark high-risk modifications)"
                 ],
-                "Knowledge": [
+                "Knowledge Management": [
                     "Structured prompt intelligent integration and optimization capability",
                     "Rule abstraction capability",
                     "Structured analysis capability of implementation details",
@@ -132,7 +132,7 @@
                     "Agent's self-optimization capability",
                     "Structured Prompt self-evolution capability"
                 ],
-                "Knowledge": [
+                "Knowledge Management": [
                     "Business goals→Technical solutions autonomous mapping",
                     "Fuzzy requirement reasoning completion",
                     "Data-driven opportunity discovery (user feedback/log analysis)",
@@ -169,7 +169,7 @@
                     "Business continuity self-maintenance",
                     "Agentic AI self-evolution system (TBD)"
                 ],
-                "Knowledge": [
+                "Knowledge Management": [
                     "Production data feedback self-training",
                     "Knowledge base real-time update",
                     "Cost/risk adaptive trade-off"

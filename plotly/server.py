@@ -6,7 +6,7 @@ app = Flask(__name__)
 
 # 获取当前文件的目录
 current_dir = Path(__file__).parent
-outpt_dir = current_dir / 'outpt'
+outpt_dir = current_dir / 'output'
 
 # 主页模板
 HOME_TEMPLATE = """

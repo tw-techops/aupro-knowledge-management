@@ -165,15 +165,15 @@ def create_interactive_html_template():
             border-left: 4px solid #FF6B6B;
         }
         
-        .capability-group[data-type="Process"] {
-            border-left: 4px solid #4ECDC4;
-        }
-        
         .capability-group[data-type="Technical"] {
             border-left: 4px solid #45B7D1;
         }
         
-        .capability-group[data-type="Knowledge"] {
+        .capability-group[data-type="Process"] {
+            border-left: 4px solid #4ECDC4;
+        }
+        
+        .capability-group[data-type="Knowledge Management"] {
             border-left: 4px solid #96CEB4;
         }
         
@@ -226,9 +226,9 @@ def create_interactive_html_template():
         // Color mapping
         const colors = {
             'Personnel': '#FF6B6B',
-            'Process': '#4ECDC4', 
             'Technical': '#45B7D1',
-            'Knowledge': '#96CEB4',
+            'Process': '#4ECDC4', 
+            'Knowledge Management': '#96CEB4',
             'Governance': '#FFEAA7'
         };
         
@@ -366,18 +366,18 @@ def create_ultra_clean_fishbone_diagram(data):
     # Define color scheme
     colors = {
         'Personnel': '#FF6B6B',
-        'Process': '#4ECDC4', 
         'Technical': '#45B7D1',
-        'Knowledge': '#96CEB4',
+        'Process': '#4ECDC4', 
+        'Knowledge Management': '#96CEB4',
         'Governance': '#FFEAA7'
     }
     
     # Y-coordinates for capability dimensions (compact spacing)
     capability_positions = {
         'Personnel': 4,
-        'Process': 2,
-        'Technical': -2,
-        'Knowledge': -4,
+        'Technical': 2,
+        'Process': -2,
+        'Knowledge Management': -4,
         'Governance': -6
     }
     
@@ -477,13 +477,13 @@ def create_ultra_clean_fishbone_diagram(data):
                     yanchor='middle'
                 )
                 
-                # Add very large invisible marker to cover the entire annotation area
-                # For Ultra-Clean version with width=400, use a large marker
+                # Add appropriately sized invisible marker to cover just the annotation area
+                # For Ultra-Clean version with width=400, use a moderate marker
                 fig.add_trace(go.Scatter(
                     x=[x_pos],
                     y=[y_pos],
                     mode='markers',
-                    marker=dict(size=200, color=color, opacity=0),  # Very large invisible marker covering annotation area
+                    marker=dict(size=80, color=color, opacity=0),  # Smaller marker for more precise hover area
                     showlegend=False,
                     hovertemplate=hover_text + '<extra></extra>',
                     name=f'{capability_type}-{level}'
@@ -513,7 +513,7 @@ def create_ultra_clean_fishbone_diagram(data):
             x=[x_pos],
             y=[description_y],
             mode='markers',
-            marker=dict(size=100, color='darkred', opacity=0),  # Much larger invisible marker to cover annotation area
+            marker=dict(size=50, color='darkred', opacity=0),  # Smaller marker for more precise hover area
             showlegend=False,
             hovertemplate=hover_description + '<extra></extra>',
             name=f'Level-{level}'
@@ -539,11 +539,11 @@ def create_ultra_clean_fishbone_diagram(data):
             standoff=10
         )
     
-    # Add movable reference lines
-    # Industry position line (initial position between L2 and L3)
-    industry_position = (x_positions[1] + x_positions[2]) / 2
-    # Organization position line (initial position between L1 and L2)
-    organization_position = (x_positions[0] + x_positions[1]) / 2
+    # Add reference lines
+    # Industry position line (at L4 position)
+    industry_position = x_positions[4]  # L4 position
+    # GITS position line (between L1 and L2)
+    organization_position = (x_positions[1] + x_positions[2]) / 2
     
     # Set layout
     fig.update_layout(
@@ -587,7 +587,7 @@ def create_ultra_clean_fishbone_diagram(data):
             font_size=12,
             font_family="Arial"
         ),
-        # Add draggable reference lines
+        # Add reference lines (non-editable)
         shapes=[
             # Industry position line
             dict(
@@ -601,7 +601,7 @@ def create_ultra_clean_fishbone_diagram(data):
                     width=3,
                     dash="dash"
                 ),
-                editable=True,
+                editable=False,
                 name="Industry Position"
             ),
             # Organization position line
@@ -616,8 +616,8 @@ def create_ultra_clean_fishbone_diagram(data):
                     width=3,
                     dash="dash"
                 ),
-                editable=True,
-                name="Organization Position"
+                editable=False,
+                name="GITS Position"
             )
         ],
         # Add annotation explanations
@@ -625,7 +625,7 @@ def create_ultra_clean_fishbone_diagram(data):
             dict(
                 x=industry_position,
                 y=11,
-                text="<b>Industry Position</b><br>(Draggable)",
+                text="<b>Industry Position</b><br>(Reference)",
                 showarrow=True,
                 arrowhead=2,
                 arrowcolor="orange",
@@ -639,7 +639,7 @@ def create_ultra_clean_fishbone_diagram(data):
             dict(
                 x=organization_position,
                 y=11,
-                text="<b>Organization Position</b><br>(Draggable)",
+                text="<b>GITS Position</b><br>(Reference)",
                 showarrow=True,
                 arrowhead=2,
                 arrowcolor="purple",
@@ -677,18 +677,18 @@ def create_interactive_fishbone_diagram(data):
     # Define color scheme
     colors = {
         'Personnel': '#FF6B6B',
-        'Process': '#4ECDC4', 
         'Technical': '#45B7D1',
-        'Knowledge': '#96CEB4',
+        'Process': '#4ECDC4', 
+        'Knowledge Management': '#96CEB4',
         'Governance': '#FFEAA7'
     }
     
     # Y-coordinates for capability dimensions
     capability_positions = {
         'Personnel': 4,
-        'Process': 2,
-        'Technical': -2,
-        'Knowledge': -4,
+        'Technical': 2,
+        'Process': -2,
+        'Knowledge Management': -4,
         'Governance': -6
     }
     
@@ -792,13 +792,13 @@ def create_interactive_fishbone_diagram(data):
                     yanchor='middle'
                 )
                 
-                # Add large invisible marker to cover the entire annotation area
-                # For Interactive version with width=200, use a moderately large marker
+                # Add appropriately sized invisible marker to cover just the annotation area
+                # For Interactive version with width=200, use a smaller marker for precise targeting
                 fig.add_trace(go.Scatter(
                     x=[x_pos],
                     y=[y_pos],
                     mode='markers',
-                    marker=dict(size=120, color=color, opacity=0),  # Large invisible marker covering annotation area
+                    marker=dict(size=60, color=color, opacity=0),  # Smaller marker for more precise hover area
                     showlegend=False,
                     hovertemplate=hover_text + '<extra></extra>',
                     name=f'{capability_type}-{level}'
@@ -828,7 +828,7 @@ def create_interactive_fishbone_diagram(data):
             x=[x_pos],
             y=[description_y],
             mode='markers',
-            marker=dict(size=100, color='darkred', opacity=0),  # Much larger invisible marker to cover annotation area
+            marker=dict(size=50, color='darkred', opacity=0),  # Smaller marker for more precise hover area
             showlegend=False,
             hovertemplate=hover_description + '<extra></extra>',
             name=f'Level-{level}'
@@ -917,7 +917,10 @@ def main(version='both'):
         print(f"Created output directory: {output_dir}")
     
     # Load data
-    data = load_maturity_data('../../resource/model_of_level_en.json')
+    # Get the directory of the current script
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    data_file = os.path.join(script_dir, '../../resource/model_of_level_en.json')
+    data = load_maturity_data(data_file)
     
     generated_files = []
     
@@ -928,7 +931,14 @@ def main(version='both'):
         fig.show()
         output_file = os.path.join(output_dir, 'ai_sd_maturity_ultra_en.html')
         fig.write_html(output_file, 
-                        config={'editable': True, 'toImageButtonOptions': {'format': 'png', 'filename': 'ai_sd_maturity_fishbone_en', 'height': 1200, 'width': 1900, 'scale': 1}})
+                        config={
+                            'editable': False, 
+                            'staticPlot': False,
+                            'displayModeBar': True,
+                            'displaylogo': False,
+                            'modeBarButtonsToRemove': ['select2d', 'lasso2d', 'editInChartStudio'],
+                            'toImageButtonOptions': {'format': 'png', 'filename': 'ai_sd_maturity_fishbone_en', 'height': 1200, 'width': 1900, 'scale': 1}
+                        })
         generated_files.append(f"- Ultra-clean layout version: {output_file}")
     
     if version == 'both' or version == 'interactive':
@@ -939,7 +949,16 @@ def main(version='both'):
         
         # First generate complete HTML, then save as temporary file
         temp_file = os.path.join(output_dir, 'temp_plot_en.html')
-        fig.write_html(temp_file, include_plotlyjs='cdn')
+        fig.write_html(temp_file, 
+                      include_plotlyjs='cdn',
+                      config={
+                          'editable': False,
+                          'staticPlot': False,
+                          'displayModeBar': True,
+                          'displaylogo': False,
+                          'modeBarButtonsToRemove': ['select2d', 'lasso2d', 'editInChartStudio'],
+                          'toImageButtonOptions': {'format': 'png', 'filename': 'ai_sd_maturity_interactive_en', 'height': 800, 'width': 1200, 'scale': 1}
+                      })
         
         # Read generated HTML content
         with open(temp_file, 'r', encoding='utf-8') as f:
